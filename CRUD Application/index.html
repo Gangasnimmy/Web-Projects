@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <input type="text" placeholder="search here..." onkeyup="searchData()" id="search">
+    <table class="main-table">
+        <tr>
+            <td class="get-details">
+                <form autocomplete="off" onsubmit="event.preventDefault();onFormSubmit();">
+                    <div>
+                        <label>FullName</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" id="fullName" name="fullname">
+                    </div>
+                    <div>
+                        <label>Date of Birth</label>
+                        <input type="date" id="dob" name="dateOfBirth">
+                    </div>
+                    <div>  
+                        <label>Contact Number</label>
+                        <input type="number" id="contact" name="contactNumber">
+                    </div>  
+                    <div>   
+                        <label>City</label>
+                        <input type="text" id="city" name="city">
+                    </div> 
+                    <div>  
+                        <label>State</label>
+                        <input type="text" id="state" name="state">
+                    </div>  
+                    <div class="form-action-buttons">
+                        <input type="submit" value="submit">
+                    </div>    
+                </form>
+            </td>
+            <td>
+                <table class="store-details" id="update-table">
+                    <thead>
+                        <th>FullName</th>
+                        <th>Date of Birth</th>
+                        <th>Contact Number</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
